@@ -13,7 +13,6 @@ branches:
 
 install:
   - npm install
-  - cypress install
   - npm run build:static:gh_pages
 
 script:
