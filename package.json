@@ -5,14 +5,15 @@
   "author": "d3vl1m3",
   "private": true,
   "scripts": {
-    "dev": "nuxt --port 3333",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test:unit": "jest",
-    "test:e2e": "yarn run cypress open",
-    "test:e2e:headless": "yarn run cypress run"
+    "build:prod": "nuxt build",
+    "build:static": "nuxt generate",
+    "ci:e2e": "start-server-and-test start:prod http://localhost:3581 test:e2e:headless",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
+    "start:dev": "nuxt",
+    "start:prod": "nuxt start",
+    "test:e2e:gui": "yarn run cypress open",
+    "test:e2e:headless": "yarn run cypress run",
+    "test:unit": "jest"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",

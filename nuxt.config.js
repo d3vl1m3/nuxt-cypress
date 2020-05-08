@@ -1,4 +1,3 @@
-
 export default {
   mode: 'universal',
   /*
@@ -58,5 +57,11 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  /*
+  ** Custom server config
+  */
+  server: {
+    port: 3581
   }
 }
