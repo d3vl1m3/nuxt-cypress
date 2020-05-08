@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        nuxt-cypress
+        This should fail
       </h1>
       <h2 class="subtitle">
         My first-class Nuxt.js project
