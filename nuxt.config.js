@@ -1,4 +1,13 @@
+// Environment aware configs
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/nuxt-cypress/'
+  }
+} : {};
+
+// Standard Config
 export default {
+  ...routerBase,
   mode: 'universal',
   /*
   ** Headers of the page
@@ -21,13 +30,11 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: [],
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [],
   /*
   ** Nuxt.js dev-modules
   */
@@ -46,8 +53,7 @@ export default {
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
-  axios: {
-  },
+  axios: {},
   /*
   ** Build configuration
   */

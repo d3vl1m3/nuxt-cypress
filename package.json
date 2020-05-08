@@ -5,14 +5,25 @@
   "author": "d3vl1m3",
   "private": true,
   "scripts": {
+    "build:gh_pages": "DEPLOY_ENV=GH_PAGES nuxt build",
     "build:prod": "nuxt build",
+
     "build:static": "nuxt generate",
+    "build:static:gh_pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
+
     "ci:e2e": "start-server-and-test start:prod http://localhost:3581 test:e2e:headless",
+    "ci:e2e:gh_pages": "start-server-and-test start:gh_pages http://localhost:3581/nuxt-cypress test:e2e:gh_pages",
+
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
+
     "start:dev": "nuxt",
+    "start:gh_pages": "DEPLOY_ENV=GH_PAGES nuxt start",
     "start:prod": "nuxt start",
+
     "test:e2e:gui": "yarn run cypress open",
     "test:e2e:headless": "yarn run cypress run",
+    "test:e2e:gh_pages": "yarn run cypress run --config-file cypress.gh_pages.json",
+
     "test:unit": "jest"
   },
   "dependencies": {

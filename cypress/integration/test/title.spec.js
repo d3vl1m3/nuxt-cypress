@@ -1,6 +1,4 @@
 /// <reference types="cypress" />
-import { cy, context } from 'cypress';
-
 context('Actions', () => {
   beforeEach(() => {
     cy.visit('/');
