@@ -13,7 +13,7 @@ branches:
 install:
   - npm install
   - npm run build:gh_pages
-  - npm run build:static:gh-pages
+  - npm run build:static:gh_pages
 
 script:
   - npm run ci:e2e:gh_pages
